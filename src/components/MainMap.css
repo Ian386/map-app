@@ -1,0 +1,26 @@
+/* src/components/MainMap.css */
+.delete-button,
+.update-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.update-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-button:hover,
+.update-button:hover {
+    opacity: 0.8;
+}

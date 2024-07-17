@@ -1,0 +1,396 @@
+{
+  "locations": [
+    {
+      "id": "31",
+      "name": "Mukami Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.591047 3.125684)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-24"
+    },
+    {
+      "id": "32",
+      "name": "Kipkaren Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.673841 3.205784)",
+      "region": "rift-valley",
+      "description": "the manager is all the farmers",
+      "date_created": "2024-06-25"
+    },
+    {
+      "id": "33",
+      "name": "Nakuru Ranch",
+      "label": "ranches",
+      "location": "SRID=4326;POINT (36.082753 -0.297237)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-25"
+    },
+    {
+      "id": "34",
+      "name": "Eldoret Estate",
+      "label": "estates",
+      "location": "SRID=4326;POINT (35.270638 0.516836)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-26"
+    },
+    {
+      "id": "35",
+      "name": "Kericho Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.288331 -0.368342)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-26"
+    },
+    {
+      "id": "36",
+      "name": "Nandi Hills Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.175018 0.102345)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-27"
+    },
+    {
+      "id": "37",
+      "name": "Turkana Pasture",
+      "label": "pastures",
+      "location": "SRID=4326;POINT (35.919825 3.121617)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-27"
+    },
+    {
+      "id": "38",
+      "name": "Baringo Plantation",
+      "label": "plantations",
+      "location": "SRID=4326;POINT (35.750022 0.464048)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-28"
+    },
+    {
+      "id": "39",
+      "name": "Naivasha Orchard",
+      "label": "orchards",
+      "location": "SRID=4326;POINT (36.435926 -0.717167)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-28"
+    },
+    {
+      "id": "40",
+      "name": "Mau Forest Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.528492 -0.384926)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-29"
+    },
+    {
+      "id": "41",
+      "name": "Kajiado Ranch",
+      "label": "ranches",
+      "location": "SRID=4326;POINT (36.781950 -1.738179)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-29"
+    },
+    {
+      "id": "d526",
+      "name": "Meru Processing Facility",
+      "label": "Processing",
+      "location": "SRID=4326;POINT (37.8088 0.3557)",
+      "region": "Central",
+      "description": "This is a facility for maize in Meru"
+    },
+    {
+      "id": "e3ec",
+      "name": "Nanyuki Farm",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.0722 0.0074)",
+      "region": "Central",
+      "description": "",
+      "farm": "Lulu Farm"
+    },
+    {
+      "id": "431",
+      "name": "Nyeri Farm",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.0400 -0.4197)",
+      "region": "Central",
+      "description": "",
+      "farmName": "Kiboko Farm"
+    },
+    {
+      "id": "098",
+      "name": "locDemo1",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (34.5584 0.5695)",
+      "region": "Western",
+      "description": "This is a demoto test url routing",
+      "farmName": "Demo3"
+    },
+    {
+      "id": "096",
+      "name": "LocDemo2",
+      "label": "Processing Facility",
+      "location": "SRID=4326;POINT (34.7519 0.2827)",
+      "region": "Western",
+      "description": "This is a test for separation of concerns"
+    },
+    {
+      "id": "457",
+      "name": "locdem8",
+      "label": "Processing Facility",
+      "location": "SRID=4326;POINT (37.77736666575105 0.23757866489040264)",
+      "region": "Eastern",
+      "description": "This is a test1 for UpdateLocation"
+    },
+    {
+      "id": "287",
+      "name": "JUjaDemo",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.012037033543265 -1.1054735884659932)",
+      "region": "Central",
+      "description": "wertyui cvbnm",
+      "farmName": "NdoloDemo"
+    }
+  ],
+  "farms": [
+    {
+      "name": "Mukami Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.591347 3.125668, 35.591058 3.125925, 35.590875 3.125968, 35.590746 3.125861, 35.59051 3.125882, 35.590231 3.126032, 35.590017 3.12614, 35.58992 3.125882, 35.590049 3.125561, 35.590189 3.125432, 35.590446 3.125529, 35.590746 3.125593, 35.590961 3.12554, 35.591143 3.125518, 35.591347 3.125668))",
+      "area": "6591.18 square meters",
+      "description": "",
+      "location": 31,
+      "produce": [
+        {
+          "produce_type": "Wheat",
+          "variety": "Wheat_one"
+        },
+        {
+          "produce_type": "Maize",
+          "variety": "Maize_One"
+        }
+      ],
+      "farmer": 3,
+      "id": "db84"
+    },
+    {
+      "name": "Kiboko Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.593347 3.127668, 35.593058 3.127925, 35.592875 3.127968, 35.592746 3.127861, 35.59251 3.127882, 35.592231 3.128032, 35.592017 3.12814, 35.59192 3.127882, 35.592049 3.127561, 35.592189 3.127432, 35.592446 3.127529, 35.592746 3.127593, 35.592961 3.12754, 35.593143 3.127518, 35.593347 3.127668))",
+      "area": "7500.25 square meters",
+      "description": "",
+      "location": 32,
+      "produce": [
+        {
+          "produce_type": "Barley",
+          "variety": "Barley_One"
+        },
+        {
+          "produce_type": "Sorghum",
+          "variety": "Sorghum_One"
+        }
+      ],
+      "farmer": 4,
+      "id": "03e4"
+    },
+    {
+      "name": "Lulu Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.595347 3.129668, 35.595058 3.129925, 35.594875 3.129968, 35.594746 3.129861, 35.59451 3.129882, 35.594231 3.130032, 35.594017 3.13014, 35.59392 3.129882, 35.594049 3.129561, 35.594189 3.129432, 35.594446 3.129529, 35.594746 3.129593, 35.594961 3.12954, 35.595143 3.129518, 35.595347 3.129668))",
+      "area": "8200.50 square meters",
+      "description": "",
+      "location": 33,
+      "produce": [
+        {
+          "produce_type": "Soybean",
+          "variety": "Soybean_One"
+        },
+        {
+          "produce_type": "Sunflower",
+          "variety": "Sunflower_One"
+        }
+      ],
+      "farmer": 5,
+      "id": "5a3b"
+    },
+    {
+      "name": "Amani Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.597347 3.131668, 35.597058 3.131925, 35.596875 3.131968, 35.596746 3.131861, 35.59651 3.131882, 35.596231 3.132032, 35.596017 3.13214, 35.59592 3.131882, 35.596049 3.131561, 35.596189 3.131432, 35.596446 3.131529, 35.596746 3.131593, 35.596961 3.13154, 35.597143 3.131518, 35.597347 3.131668))",
+      "area": "9000.75 square meters",
+      "description": "",
+      "location": 234,
+      "produce": [
+        {
+          "produce_type": "Rice",
+          "variety": "Rice_One"
+        },
+        {
+          "produce_type": "Tomato",
+          "variety": "Tomato_One"
+        }
+      ],
+      "farmer": 6,
+      "id": "7508"
+    },
+    {
+      "name": "Juja Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.599347 3.133668, 35.599058 3.133925, 35.598875 3.133968, 35.598746 3.133861, 35.59851 3.133882, 35.598231 3.134032, 35.598017 3.13414, 35.59792 3.133882, 35.598049 3.133561, 35.598189 3.133432, 35.598446 3.133529, 35.598746 3.133593, 35.598961 3.13354, 35.599143 3.133518, 35.599347 3.133668))",
+      "area": "10000.80 square meters",
+      "description": "",
+      "location": 35,
+      "produce": [
+        {
+          "produce_type": "Cassava",
+          "variety": "Cassava_One"
+        },
+        {
+          "produce_type": "Peanut",
+          "variety": "Peanut_One"
+        }
+      ],
+      "farmer": 7,
+      "id": "9349"
+    },
+    {
+      "id": "125",
+      "name": "Demo3",
+      "description": "This is a demo to test 1 UpdateFarm",
+      "produce": [
+        {
+          "produce_type": "Maize",
+          "variety": "Type_1"
+        },
+        {
+          "produce_type": "Beans",
+          "variety": "Type_2"
+        }
+      ],
+      "farmer": "3",
+      "farm_area": "SRID=4326;POLYGON ((38.80829020804848 -0.07324037941467351, 38.54468791195428 -0.7653563090553878, 39.30254451322508 -1.7538746338305353, 40.214169120550835 -0.7653563090553878, 39.91761653744486 0.23437613448904118))"
+    },
+    {
+      "id": "126",
+      "name": "DemoIan4",
+      "description": "This is a demo 2 testing UpdateFarm1.",
+      "produce": [
+        {
+          "produce_type": "Potatoes",
+          "variety": "Type_1"
+        },
+        {
+          "produce_type": "Ginger",
+          "variety": "Type_white"
+        }
+      ],
+      "farmer": "2",
+      "farm_area": "SRID=4326;POLYGON ((37.92325149263129 -2.6851737608572863, 37.9287513507758 -3.0966358718415505, 38.73173063987427 -3.4640741915530184, 38.693231632862705 -2.8607491158660014, 38.36446532904232 -1.9496968587473593))"
+    },
+    {
+      "id": "094",
+      "name": "Demo6 Field",
+      "description": "This is a demo to test concerns",
+      "produce": [
+        {
+          "produce_type": "Coffee",
+          "variety": "Robusta"
+        }
+      ],
+      "farmer": "4",
+      "farm_area": "SRID=4326;POLYGON ((41.23732043065526 3.080180314674537, 40.795008595004866 3.039040312065463, 40.525775303739394 2.8223442468940902, 40.80325043045175 2.825087494112747, 40.641160999996 2.5589632909839883, 40.98731808876591 2.531524566905416, 40.98731808876591 2.8113711933311403))"
+    },
+    {
+      "id": "345",
+      "name": "NdoloDemo",
+      "description": "This is a day demo",
+      "produce": [
+        {
+          "produce_type": "Banana",
+          "variety": "Kisii_1"
+        }
+      ],
+      "farmer": "2",
+      "farm_area": "SRID=4326;POLYGON ((34.69263437314556 -0.11054985816501378, 34.669969325666564 -0.16616797994936602, 34.80664643016101 -0.20050007906915449, 34.897993439697515 -0.0865173011058223, 34.765437252926525 -0.14282211771737158, 34.76887135102941 -0.03295898255728466))"
+    },
+    {
+      "id": "345",
+      "name": "NdoloDemo",
+      "description": "This is a day demo",
+      "produce": [
+        {
+          "produce_type": "Banana",
+          "variety": "Kisii_1"
+        }
+      ],
+      "farmer": "2",
+      "farm_area": "SRID=4326;POLYGON ((34.69263437314556 -0.11054985816501378, 34.669969325666564 -0.16616797994936602, 34.80664643016101 -0.20050007906915449, 34.897993439697515 -0.0865173011058223, 34.765437252926525 -0.14282211771737158, 34.76887135102941 -0.03295898255728466))"
+    },
+    {
+      "id": "345",
+      "name": "NdoloDemo",
+      "description": "This is a day demo",
+      "produce": [
+        {
+          "produce_type": "Banana",
+          "variety": "Kisii_1"
+        }
+      ],
+      "farmer": "2",
+      "farm_area": "SRID=4326;POLYGON ((34.69263437314556 -0.11054985816501378, 34.669969325666564 -0.16616797994936602, 34.80664643016101 -0.20050007906915449, 34.897993439697515 -0.0865173011058223, 34.765437252926525 -0.14282211771737158, 34.76887135102941 -0.03295898255728466))"
+    },
+    {
+      "id": "345",
+      "name": "NdoloDemo",
+      "description": "This is a day demo",
+      "produce": [
+        {
+          "produce_type": "Banana",
+          "variety": "Kisii_1"
+        }
+      ],
+      "farmer": "2",
+      "farm_area": "SRID=4326;POLYGON ((34.69263437314556 -0.11054985816501378, 34.669969325666564 -0.16616797994936602, 34.80664643016101 -0.20050007906915449, 34.897993439697515 -0.0865173011058223, 34.765437252926525 -0.14282211771737158, 34.76887135102941 -0.03295898255728466))"
+    }
+  ],
+  "farmers": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "2",
+      "name": "Jane Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "3",
+      "name": "Alice Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "4",
+      "name": "Bob Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "5",
+      "name": "Eve Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "6",
+      "name": "Mark Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "7",
+      "name": "Luke Doe",
+      "phone-number": "0712345678"
+    }
+  ]
+}
