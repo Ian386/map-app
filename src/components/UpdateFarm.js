@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, FeatureGroup, LayersControl, Polygon } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
 import axios from 'axios';
@@ -6,13 +6,15 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Geocoder from './Geocoder';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import L from 'leaflet';
-import './crudForm.css'
+import './crudForm.css';
 
 const { BaseLayer } = LayersControl;
 
 const UpdateFarm = ({ farms, onUpdateFarm }) => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const mapRef = useRef();
+  const polygonRef = useRef(); // Create a ref for the Polygon
   const [farm, setFarm] = useState(null);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -22,6 +24,7 @@ const UpdateFarm = ({ farms, onUpdateFarm }) => {
   const [area, setArea] = useState('');
   const [farmers, setFarmers] = useState([]);
   const [notification, setNotification] = useState('');
+  const [mapReady, setMapReady] = useState(false);
 
   useEffect(() => {
     const currentFarm = farms.find((farm) => farm.id === id);
@@ -34,9 +37,12 @@ const UpdateFarm = ({ farms, onUpdateFarm }) => {
       setFarmArea(currentFarm.farm_area);
       setArea(currentFarm.area);
 
-      
+      const parsedArea = parseFarmArea(currentFarm.farm_area);
+      if (mapReady && mapRef.current) {
+        mapRef.current.fitBounds(parsedArea);
+      }
     }
-  }, [id, farms]);
+  }, [id, farms, mapReady]);
 
   useEffect(() => {
     const fetchFarmers = async () => {
@@ -76,7 +82,7 @@ const UpdateFarm = ({ farms, onUpdateFarm }) => {
       setNotification('Field updated successfully!');
       setTimeout(() => {
         setNotification('');
-      }, 3000); // Clear notification after 3 seconds
+      }, 3000);
       navigate('/');
     } catch (error) {
       console.error('Error updating field:', error);
@@ -195,7 +201,13 @@ const UpdateFarm = ({ farms, onUpdateFarm }) => {
             <button className="btn" type="submit">Update Field</button>
           </form>
         </div>
-        <MapContainer center={[0, 38]} zoom={8} className="leaflet-container">
+        <MapContainer 
+          center={[0, 38]} 
+          zoom={8} 
+          className="leaflet-container" 
+          ref={mapRef}
+          whenReady={() => setMapReady(true)}
+        >
           <Geocoder />
           <LayersControl position="topright">
             <BaseLayer checked name="Google Hybrid Map">
@@ -221,17 +233,18 @@ const UpdateFarm = ({ farms, onUpdateFarm }) => {
               onCreated={handleCreated}
               draw={{
                 rectangle: false,
-                circle: false,
-                circlemarker: false,
-                marker: false,
                 polyline: false,
-              }}
-              edit={{
-                edit: true,
-                remove: true,
+                circle: false,
+                marker: false,
+                circlemarker: false,
               }}
             />
-            {farm && <Polygon positions={parseFarmArea(farmArea)} />}
+            {farmArea && (
+              <Polygon
+                ref={polygonRef}
+                positions={parseFarmArea(farmArea)}
+              />
+            )}
           </FeatureGroup>
         </MapContainer>
       </div>
