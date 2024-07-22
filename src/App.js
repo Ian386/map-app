@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "leaflet-draw/dist/leaflet.draw.css";
 import AddLocation from './components/AddLocation';
 import AddField from './components/AddField';
-import Sidebar from './components/mainSideBar';
 import MainMap from './components/MainMap';
 import UpdateLocation from './components/UpdateLocation';
 import UpdateFarm from './components/UpdateFarm';
@@ -16,6 +15,7 @@ import { Icon, divIcon, point } from 'leaflet';
 function App() {
   const [locations, setLocations] = useState([]);
   const [farms, setFarms] = useState([]);
+  const [farmers, setFarmers] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:5000/locations')
@@ -32,6 +32,14 @@ function App() {
       })
       .catch(error => {
         console.error("There was an error fetching the farm data!", error);
+      });
+
+    axios.get('http://localhost:5000/farmers')
+      .then(response => {
+        setFarmers(response.data);
+      })
+      .catch(error => {
+        console.error("There was an error fetching the farmers data!", error);
       });
   }, []);
 
@@ -117,7 +125,6 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Sidebar />
               <MainMap 
                 locations={locations}
                 farms={farms}
@@ -125,6 +132,7 @@ function App() {
                 parsePolygon={parsePolygon}
                 customIcon={customIcon}
                 createCustomClusterIcon={createCustomClusterIcon}
+                farmers={farmers} // Pass farmers data here
               />
             </>
           } />

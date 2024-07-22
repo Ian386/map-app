@@ -1,4 +1,80 @@
 /* src/components/MainMap.css */
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px;
+    background: #e9f7ef; /* Light green background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto; /* Center it within the parent */
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background: #27ae60; /* Green button */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background: #218c4f; /* Darker green on hover */
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.filter-group h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #27ae60; /* Green heading */
+}
+
+.select-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
 .delete-button,
 .update-button {
     display: inline-block;
@@ -23,4 +99,38 @@
 .delete-button:hover,
 .update-button:hover {
     opacity: 0.8;
+}
+
+.mainSideBar {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.mainSideBar-button {
+    flex: 1;
+    display: block;
+    padding: 10px;
+    background: #2ecc71; /* Green button */
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.mainSideBar-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.mainSideBar-button:hover {
+    background: #27ae60; /* Darker green on hover */
+}
+
+/* Add styles for the MapContainer if needed */
+.map-container {
+    border-radius: 12px; /* Match the border-radius with filter-container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
