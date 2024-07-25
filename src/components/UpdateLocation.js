@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { MapContainer, TileLayer, Marker, LayersControl } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, LayersControl, FeatureGroup } from 'react-leaflet';
+import { EditControl } from 'react-leaflet-draw';
+import 'leaflet-draw/dist/leaflet.draw.css';
 import Geocoder from './Geocoder';
-//  import './UpdateLocation.css';
-import './crudForm.css'
-
+import './crudForm.css';
 
 const { BaseLayer } = LayersControl;
 
@@ -12,7 +12,6 @@ const UpdateLocation = ({ locations, farms, onUpdate }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const location = locations.find((loc) => loc.id === id);
-
 
   const [name, setName] = useState('');
   const [label, setLabel] = useState('');
@@ -24,6 +23,7 @@ const UpdateLocation = ({ locations, farms, onUpdate }) => {
   const [notification, setNotification] = useState('');
 
   const mapRef = useRef();
+  const featureGroupRef = useRef();
 
   useEffect(() => {
     if (location) {
@@ -145,7 +145,6 @@ const UpdateLocation = ({ locations, farms, onUpdate }) => {
                 placeholder="Update Latitude"
                 value={latitude}
                 onChange={(e) => setLatitude(parseFloat(e.target.value))}
-                readOnly
               />
             </div>
             <div className="form-control">
@@ -155,7 +154,6 @@ const UpdateLocation = ({ locations, farms, onUpdate }) => {
                 placeholder="Update Longitude"
                 value={longitude}
                 onChange={(e) => setLongitude(parseFloat(e.target.value))}
-                readOnly
               />
             </div>
             <div className="form-control">
@@ -185,7 +183,7 @@ const UpdateLocation = ({ locations, farms, onUpdate }) => {
             <input type="submit" value="Update Location" className="btn btn-block" />
           </form>
         </div>
-        <MapContainer center={[latitude || 0, longitude || 38]} zoom={8} className='leaflet-container' ref={mapRef}>
+        <MapContainer center={[latitude || 0, longitude || 38]} zoom={8} className='leaflet-container' ref={mapRef} >
           <Geocoder />
           <LayersControl position="topright">
             <BaseLayer checked name='Google Hybrid Map'>
@@ -212,9 +210,39 @@ const UpdateLocation = ({ locations, farms, onUpdate }) => {
               />
             </BaseLayer>
           </LayersControl>
-          {latitude && longitude && (
-            <Marker position={[latitude, longitude]} />
-          )}
+          <FeatureGroup ref={featureGroupRef}>
+            {latitude && longitude && (
+              <Marker position={[latitude, longitude]} draggable
+                eventHandlers={{
+                  dragend: (event) => {
+                    const marker = event.target;
+                    const position = marker.getLatLng();
+                    setLatitude(position.lat);
+                    setLongitude(position.lng);
+                  },
+                }}
+              />
+            )}
+            <EditControl
+              position="topright"
+              onCreated={(e) => {
+                const { layerType, layer } = e;
+                if (layerType === 'marker') {
+                  const { lat, lng } = layer.getLatLng();
+                  setLatitude(lat);
+                  setLongitude(lng);
+                }
+              }}
+              featureGroup={featureGroupRef.current}
+              draw={{
+                rectangle: false,
+                circle: false,
+                circlemarker: false,
+                polyline: false,
+                polygon: false,
+              }}
+            />
+          </FeatureGroup>
         </MapContainer>
       </div>
     </>

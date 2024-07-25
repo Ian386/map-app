@@ -76,17 +76,14 @@ const UpdateFarm = ({ farms, onUpdateFarm }) => {
       area,
     };
 
-    try {
-      await axios.put(`http://localhost:5000/farms/${farm.id}`, updatedFarm);
-      onUpdateFarm(farm.id, updatedFarm);
-      setNotification('Field updated successfully!');
+    await axios.put(`http://localhost:5000/farms/${farm.id}`, updatedFarm);
+    onUpdateFarm(farm.id, updatedFarm);
+    setNotification('Field updated successfully!');
       setTimeout(() => {
         setNotification('');
+        navigate('/');
       }, 3000);
-      navigate('/');
-    } catch (error) {
-      console.error('Error updating field:', error);
-    }
+
   };
 
   const handleEdited = (e) => {

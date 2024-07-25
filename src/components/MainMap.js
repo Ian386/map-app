@@ -1,5 +1,4 @@
-// src/components/MainMap.js
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup, LayersControl, Polygon, LayerGroup } from 'react-leaflet';
 import { Icon } from 'leaflet';
@@ -27,8 +26,18 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
   const [selectedLabel, setSelectedLabel] = useState('');
   const [selectedFarmer, setSelectedFarmer] = useState('');
   const [selectedProduce, setSelectedProduce] = useState('');
+  const [filteredLocations, setFilteredLocations] = useState(locations);
+  const [filteredFarms, setFilteredFarms] = useState(farms);
+
   const navigate = useNavigate();
   const mapRef = useRef();
+
+  useEffect(() => {
+    setFilteredLocations(locations);
+    setFilteredFarms(farms);
+  }, [locations, farms]);
+
+
 
   const handleDelete = async (id, type) => {
     const confirmDelete = window.confirm("Are you sure you want to delete this item?");
@@ -47,17 +56,19 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
   };
 
   const handleSearch = () => {
-    let foundItem = locations.find(location => location.name.toLowerCase() === searchTerm.toLowerCase());
+    const searchTermLower = searchTerm.toLowerCase();
 
-    if (!foundItem) {
-      foundItem = farms.find(farm => farm.name.toLowerCase() === searchTerm.toLowerCase());
-    }
+    let foundLocation = locations.find(location => location.name.toLowerCase() === searchTermLower);
+    let foundFarm = farms.find(farm => farm.name.toLowerCase() === searchTermLower);
 
-    if (foundItem) {
-      const coordinates = foundItem.location
-        ? parseLocation(foundItem.location)
-        : parsePolygon(foundItem.farm_area)[0];
-      mapRef.current.setView(coordinates, 15);
+    if (foundLocation) {
+      setFilteredLocations([foundLocation]);
+      setFilteredFarms([]);
+      zoomToLocation(foundLocation);
+    } else if (foundFarm) {
+      setFilteredLocations([]);
+      setFilteredFarms([foundFarm]);
+      zoomToFarm(foundFarm);
     } else {
       alert("No matching location or farm found!");
     }
@@ -65,37 +76,81 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
 
   const handleRegionChange = (event) => {
     setSelectedRegion(event.target.value);
+    applyFilters(event.target.value, selectedLabel, selectedFarmer, selectedProduce);
   };
 
   const handleLabelChange = (event) => {
     setSelectedLabel(event.target.value);
+    applyFilters(selectedRegion, event.target.value, selectedFarmer, selectedProduce);
   };
 
   const handleFarmerChange = (event) => {
     setSelectedFarmer(event.target.value);
+    applyFilters(selectedRegion, selectedLabel, event.target.value, selectedProduce);
   };
 
   const handleProduceChange = (event) => {
     setSelectedProduce(event.target.value);
+    applyFilters(selectedRegion, selectedLabel, selectedFarmer, event.target.value);
   };
 
-  const filteredLocations = locations.filter(location => {
-    return (
-      (!selectedRegion || location.region === selectedRegion) &&
-      (!selectedLabel || location.label === selectedLabel)
-    );
-  });
+  const applyFilters = (region, label, farmer, produce) => {
+    const filteredLocs = locations.filter(location => {
+      return (
+        (!region || location.region === region) &&
+        (!label || location.label === label)
+      );
+    });
 
-  const filteredFarms = farms.filter(farm => {
-    return (
-      (!selectedFarmer || farm.farmer === selectedFarmer) &&
-      (!selectedProduce || farm.produce.some(produce => produce.produce_type === selectedProduce))
-    );
-  });
+    const filteredFarms = farms.filter(farm => {
+      return (
+        (!farmer || farm.farmer === farmer) &&
+        (!produce || farm.produce.some(produceItem => produceItem.produce_type === produce))
+      );
+    });
+
+    setFilteredLocations(filteredLocs);
+    setFilteredFarms(filteredFarms);
+  };
+
+  const zoomToLocation = (location) => {
+    if (!location) return;
+    const [lat, lng] = parseLocation(location.location);
+    mapRef.current.setView([lat, lng], 15);
+    setActiveLocation(location);
+  };
+
+  const handleLocationSelectChange = (e) => {
+  const selectedLocation = filteredLocations.find(loc => loc.id === e.target.value);
+  zoomToLocation(selectedLocation);
+};
+
+  const handleFarmSelectChange = (e) => {
+  const selectedFarm = filteredFarms.find(farm => farm.id === e.target.value);
+  zoomToFarm(selectedFarm);
+};
+
+  const zoomToFarm = (farm) => {
+    if (!farm) return; // Add this check
+    const [lat, lng] = parsePolygon(farm.farm_area)[0];
+    mapRef.current.setView([lat, lng], 15);
+    setActiveFarm(farm);
+  };
+
+  const clearFilters = () => {
+    setSearchTerm('');
+    setSelectedRegion('');
+    setSelectedLabel('');
+    setSelectedFarmer('');
+    setSelectedProduce('');
+    setFilteredLocations(locations);
+    setFilteredFarms(farms);
+    mapRef.current.setView([0, 38], 7);
+  };
 
   return (
     <>
-            <div className="filter-container">
+      <div className="filter-container">
         <div className="search-bar">
           <input
             type="text"
@@ -122,6 +177,15 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
                 ))}
               </select>
             </div>
+            <div className="filtered-results">
+              <h4>Locations Found ({filteredLocations.length}):</h4>
+              <select onChange={handleLocationSelectChange}>
+                <option value="">Select Location</option>
+                {filteredLocations.map(location => (
+                  <option key={location.id} value={location.id}>{location.name}</option>
+                ))}
+              </select>
+            </div>
           </div>
           <div className="filter-group">
             <h3>Farm Filters</h3>
@@ -139,6 +203,15 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
                 ))}
               </select>
             </div>
+            <div className="filtered-results">
+              <h4>Farms Found ({filteredFarms.length}):</h4>
+              <select onChange={handleFarmSelectChange}>
+                <option value="">Select Farm</option>
+                {filteredFarms.map(farm => (
+                  <option key={farm.id} value={farm.id}>{farm.name}</option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
         <div className="mainSideBar">
@@ -148,9 +221,10 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
           <button className="mainSideBar-button">
             <Link to="/add-field">Add Field</Link>
           </button>
+          <button className="mainSideBar-button" onClick={clearFilters}>Clear</button>
         </div>
       </div>
-      <MapContainer center={[0, 35]} zoom={8} ref={mapRef}>
+      <MapContainer center={[0, 38]} zoom={7} ref={mapRef}>
         <Geocoder />
         <LayersControl position="topright">
           <BaseLayer checked name='Google Hybrid Map'>
@@ -158,18 +232,16 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
               url="http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}"
               attribution='&copy; Google Maps'
               subdomains={['mt0', 'mt1', 'mt2', 'mt3']}
-              maxZoom={23}
-            />
-          </BaseLayer>
-          <BaseLayer name='Terrain Map'>
-            <TileLayer
-              url="http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}"
-              attribution='&copy; Google Maps'
-              subdomains={['mt0', 'mt1', 'mt2', 'mt3']}
               maxZoom={20}
             />
           </BaseLayer>
-          <BaseLayer name='OpenStreetMap'>
+          <BaseLayer name='Topo Map'>
+            <TileLayer
+              url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
+              attribution='&copy; OpenStreetMap contributors'
+            />
+          </BaseLayer>
+          <BaseLayer name='Open Street Map'>
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
@@ -264,11 +336,11 @@ function MainMap({ locations, farms, parseLocation, parsePolygon, customIcon, cr
                       Delete
                     </button>
                     <button
-                    className="update-button"
-                    onClick={() => handleUpdate(activeFarm.id, 'farm')}
-                  >
-                    Update
-                  </button>
+                      className="update-button"
+                      onClick={() => handleUpdate(activeFarm.id, 'farm')}
+                    >
+                      Update
+                    </button>
                   </div>
                 </Popup>
               )}

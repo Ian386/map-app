@@ -1,0 +1,481 @@
+{
+  "locations": [
+    {
+      "id": "31",
+      "name": "Mukami Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.591047 3.125684)",
+      "region": "rift-valley",
+      "description": "This is a demo for Mukami Farm",
+      "date_created": "2024-06-24"
+    },
+    {
+      "id": "32",
+      "name": "Kipkaren Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.673841 3.205784)",
+      "region": "rift-valley",
+      "description": "the manager is all the farmers",
+      "date_created": "2024-06-25"
+    },
+    {
+      "id": "33",
+      "name": "Nakuru Ranch",
+      "label": "ranches",
+      "location": "SRID=4326;POINT (36.082753 -0.297237)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-25"
+    },
+    {
+      "id": "35",
+      "name": "Kericho Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.288331 -0.368342)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-26"
+    },
+    {
+      "id": "36",
+      "name": "Nandi Hills Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.17764257664314 0.10365122863523207)",
+      "region": "Western",
+      "description": "some description to fill."
+    },
+    {
+      "id": "37",
+      "name": "Turkana Pasture",
+      "label": "pastures",
+      "location": "SRID=4326;POINT (35.919825 3.121617)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-27"
+    },
+    {
+      "id": "38",
+      "name": "Baringo Plantation",
+      "label": "plantations",
+      "location": "SRID=4326;POINT (35.750022 0.464048)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-28"
+    },
+    {
+      "id": "39",
+      "name": "Naivasha Orchard",
+      "label": "orchards",
+      "location": "SRID=4326;POINT (36.435926 -0.717167)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-28"
+    },
+    {
+      "id": "40",
+      "name": "Mau Forest Farm",
+      "label": "farms",
+      "location": "SRID=4326;POINT (35.528492 -0.384926)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-29"
+    },
+    {
+      "id": "41",
+      "name": "Kajiado Ranch",
+      "label": "ranches",
+      "location": "SRID=4326;POINT (36.781950 -1.738179)",
+      "region": "rift-valley",
+      "description": "",
+      "date_created": "2024-06-29"
+    },
+    {
+      "id": "e3ec",
+      "name": "Nanyuki Farm",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.07559671539466 0.010557174622885046)",
+      "region": "Central",
+      "description": "",
+      "farmName": ""
+    },
+    {
+      "id": "431",
+      "name": "Nyeri Farm",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.0400 -0.4197)",
+      "region": "Central",
+      "description": "",
+      "farmName": "Kiboko Farm"
+    },
+    {
+      "id": "096",
+      "name": "LocDemo2",
+      "label": "Processing Facility",
+      "location": "SRID=4326;POINT (34.7519 0.2827)",
+      "region": "Western",
+      "description": "This is a test for separation of concerns"
+    },
+    {
+      "id": "457",
+      "name": "locdem8",
+      "label": "Processing Facility",
+      "location": "SRID=4326;POINT (37.77736666575105 0.23757866489040264)",
+      "region": "Eastern",
+      "description": "This is a test1 for UpdateLocation"
+    },
+    {
+      "id": "287",
+      "name": "JUjaDemo",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.012037033543265 -1.1054735884659932)",
+      "region": "Central",
+      "description": "wertyui cvbnm",
+      "farmName": "NdoloDemo"
+    },
+    {
+      "id": "325",
+      "name": "Mbondoni",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.99612487244163 -0.9736164704784508)",
+      "region": "Eastern",
+      "description": "This is a random test for efficiency",
+      "farmName": "Lulu Farm"
+    },
+    {
+      "id": "1000",
+      "name": "Carrefour Supermarket",
+      "label": "Supermarket",
+      "location": "SRID=4326;POINT (36.878785927722454 -1.2324765436395342)",
+      "region": "Central",
+      "description": "This is a supermarket we deal with in Gardern City Mall"
+    },
+    {
+      "id": "1001",
+      "name": "Naivas Juja Supermarket",
+      "label": "Supermarket",
+      "location": "SRID=4326;POINT (37.00892640586982 -1.1177370218937577)",
+      "region": "Central",
+      "description": "This is a Naivas Branch we deal with in Juja."
+    },
+    {
+      "id": "1002",
+      "name": "ArtCaffe VillageMarket ",
+      "label": "Restaurant",
+      "location": "SRID=4326;POINT (36.80470017487783 -1.2294490285128425)",
+      "region": "Nairobi",
+      "description": "This is a ArtCaffe restaurant in Village Market that orders mostly fruits "
+    },
+    {
+      "id": "1003",
+      "name": "JavaHouse Thika Road",
+      "label": "Restaurant",
+      "location": "SRID=4326;POINT (36.889153961223755 -1.2197537167542853)",
+      "region": "Nairobi",
+      "description": "This is JavaHouse Restaurant in Thika Road that orders mostly eggs, milk and fruits."
+    },
+    {
+      "id": "1004",
+      "name": "Ngara Dist. Centre",
+      "label": "Distribution Center",
+      "location": "SRID=4326;POINT (36.82781836077792 -1.2771407024995811)",
+      "region": "Nairobi",
+      "description": "This is a branch of the main Distribution centre that serves the Nairobi Region"
+    },
+    {
+      "id": "1005",
+      "name": "Ngong Dist. Centre",
+      "label": "Distribution Center",
+      "location": "SRID=4326;POINT (36.67296170627442 -1.3565935591719378)",
+      "region": "Nairobi",
+      "description": "This is one of our main distribution centres in Nairobi that serves our main operations"
+    },
+    {
+      "id": "1006",
+      "name": "Industrial Area Warehouse",
+      "label": "Warehouse",
+      "location": "SRID=4326;POINT (36.86251309153462 -1.3074499995428788)",
+      "region": "Nairobi",
+      "description": "This is our main operations Warehouse for our main products in the central Region"
+    },
+    {
+      "id": "1007",
+      "name": "Jogoo Road Warehouse",
+      "label": "Warehouse",
+      "location": "SRID=4326;POINT (35.71208942563205 -0.17992764940504968)",
+      "region": "Nairobi",
+      "description": "This is Warehouse under our operations in the Western regions"
+    },
+    {
+      "id": "1008",
+      "name": "Jumua Processing Facility",
+      "label": "Processing Facility",
+      "location": "SRID=4326;POINT (36.8466521018593 -1.3043957569942983)",
+      "region": "Nairobi",
+      "description": "This is a processing facility for our fresh farm products"
+    },
+    {
+      "id": "1009",
+      "name": "Thika Processing Facility",
+      "label": "Processing Facility",
+      "location": "SRID=4326;POINT (37.08283105633868 -1.0360419864984791)",
+      "region": "Central",
+      "description": "This is our main processing Facility in Thika"
+    },
+    {
+      "id": "1010",
+      "name": "Juja Farm",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (37.082743580827646 -1.165331418329505)",
+      "region": "Central",
+      "description": "This is is location marker for the juja farm in our portfolio",
+      "farmName": "Juja Farm"
+    },
+    {
+      "id": "1011",
+      "name": "Mukua Farm",
+      "label": "Farm",
+      "location": "SRID=4326;POINT (36.6786651091854 -1.3591945712810394)",
+      "region": "Nairobi",
+      "description": "This is a farm owned by Mukua in Ngong beside Oloo Road",
+      "farmName": "Mukua Farm"
+    }
+  ],
+  "farms": [
+    {
+      "name": "Mukami Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.591347 3.125668, 35.591058 3.125925, 35.590875 3.125968, 35.590746 3.125861, 35.59051 3.125882, 35.590231 3.126032, 35.590017 3.12614, 35.58992 3.125882, 35.590049 3.125561, 35.590189 3.125432, 35.590446 3.125529, 35.590746 3.125593, 35.590961 3.12554, 35.591143 3.125518, 35.591347 3.125668))",
+      "area": "6591.18 square meters",
+      "description": "",
+      "location": 31,
+      "produce": [
+        {
+          "produce_type": "Wheat",
+          "variety": "Wheat_one"
+        },
+        {
+          "produce_type": "Maize",
+          "variety": "Maize_One"
+        }
+      ],
+      "farmer": 3,
+      "id": "db84"
+    },
+    {
+      "name": "Kiboko Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.593347 3.127668, 35.593141636474755 3.127925900161614, 35.59290553338851 3.1277357470183125, 35.59304241582518 3.128070523655961, 35.59271781888501 3.1279848208469048, 35.59251 3.127882, 35.592231 3.128032, 35.592017 3.12814, 35.59192 3.127882, 35.592049 3.127561, 35.592189 3.127432, 35.592446 3.127529, 35.592746 3.127593, 35.592961 3.12754, 35.593143 3.127518))",
+      "area": "7500.25 square meters",
+      "description": "",
+      "location": 32,
+      "produce": [
+        {
+          "produce_type": "Barley",
+          "variety": "Barley_One"
+        },
+        {
+          "produce_type": "Sorghum",
+          "variety": "Sorghum_One"
+        }
+      ],
+      "farmer": 4,
+      "id": "03e4"
+    },
+    {
+      "name": "Lulu Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.595347 3.129668, 35.595058 3.129925, 35.594875 3.129968, 35.594746 3.129861, 35.59451 3.129882, 35.594231 3.130032, 35.594017 3.13014, 35.59392 3.129882, 35.594049 3.129561, 35.594189 3.129432, 35.594446 3.129529, 35.594746 3.129593, 35.594961 3.12954, 35.595143 3.129518, 35.595347 3.129668))",
+      "area": "8200.50 square meters",
+      "description": "",
+      "location": 33,
+      "produce": [
+        {
+          "produce_type": "Soybean",
+          "variety": "Soybean_One"
+        },
+        {
+          "produce_type": "Sunflower",
+          "variety": "Sunflower_One"
+        }
+      ],
+      "farmer": 5,
+      "id": "5a3b"
+    },
+    {
+      "name": "Amani Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.597347 3.131668, 35.597058 3.131925, 35.596875 3.131968, 35.596746 3.131861, 35.59651 3.131882, 35.596231 3.132032, 35.596017 3.13214, 35.59592 3.131882, 35.596049 3.131561, 35.596189 3.131432, 35.596446 3.131529, 35.596746 3.131593, 35.596961 3.13154, 35.597143 3.131518, 35.597347 3.131668))",
+      "area": "9000.75 square meters",
+      "description": "",
+      "location": 234,
+      "produce": [
+        {
+          "produce_type": "Rice",
+          "variety": "Rice_One"
+        },
+        {
+          "produce_type": "Tomato",
+          "variety": "Tomato_One"
+        }
+      ],
+      "farmer": 6,
+      "id": "7508"
+    },
+    {
+      "name": "Juja Farm",
+      "farm_area": "SRID=4326;POLYGON ((35.599347 3.133668, 35.599058 3.133925, 35.598875 3.133968, 35.598746 3.133861, 35.59851 3.133882, 35.598231 3.134032, 35.598017 3.13414, 35.59792 3.133882, 35.598049 3.133561, 35.598189 3.133432, 35.598446 3.133529, 35.598746 3.133593, 35.598961 3.13354, 35.599143 3.133518, 35.599347 3.133668))",
+      "area": "10000.80 square meters",
+      "description": "",
+      "location": 35,
+      "produce": [
+        {
+          "produce_type": "Cassava",
+          "variety": "Cassava_One"
+        },
+        {
+          "produce_type": "Peanut",
+          "variety": "Peanut_One"
+        }
+      ],
+      "farmer": 7,
+      "id": "9349"
+    },
+    {
+      "id": "125",
+      "name": "Demo3",
+      "description": "This is a demo to test 1 UpdateFarm",
+      "produce": [
+        {
+          "produce_type": "Maize",
+          "variety": "Type_1"
+        },
+        {
+          "produce_type": "Beans",
+          "variety": "Type_2"
+        }
+      ],
+      "farmer": "3",
+      "farm_area": "SRID=4326;POLYGON ((38.80829020804848 -0.07324037941467351, 38.54468791195428 -0.7653563090553878, 39.30254451322508 -1.7538746338305353, 40.29876195765339 -2.3065056838291094, 40.15493040082582 -0.6317010689101215, 39.96800124605707 -0.3680394611934528, 39.599872893939285 -0.280150250892118, 39.1111233683911 -0.7854978539243997))"
+    },
+    {
+      "id": "126",
+      "name": "DemoIan4",
+      "description": "This is a demo 4 testing UpdateFarm1.",
+      "produce": [
+        {
+          "produce_type": "Potatoes",
+          "variety": "Type_1"
+        },
+        {
+          "produce_type": "Ginger",
+          "variety": "Type_white"
+        }
+      ],
+      "farmer": "2",
+      "farm_area": "SRID=4326;POLYGON ((37.92325149263129 -2.6851737608572863, 37.9287513507758 -3.0966358718415505, 38.367013448394914 -3.228271011252635, 38.73173063987427 -3.4640741915530184, 38.49332557798619 -3.148743443018163, 38.35049704430172 -3.0143555563366684, 38.42733517832692 -2.833317196855293, 38.866926200634936 -2.8607491158660014, 39.20753371280721 -2.841546841096039, 38.95485861269798 -2.2955282141879016, 38.36446532904232 -1.9496968587473593))",
+      "area": "6789990"
+    },
+    {
+      "id": "094",
+      "name": "Demo6 Field",
+      "description": "This is a demo to test concerns",
+      "produce": [
+        {
+          "produce_type": "Coffee",
+          "variety": "Robusta"
+        }
+      ],
+      "farmer": "4",
+      "farm_area": "SRID=4326;POLYGON ((41.23732043065526 3.080180314674537, 40.795008595004866 3.039040312065463, 40.525775303739394 2.8223442468940902, 40.80325043045175 2.825087494112747, 40.641160999996 2.5589632909839883, 40.98731808876591 2.531524566905416, 40.98731808876591 2.8113711933311403))"
+    },
+    {
+      "id": "345",
+      "name": "NdoloDemo",
+      "description": "This is a day demo1",
+      "produce": [
+        {
+          "produce_type": "Banana",
+          "variety": "Kisii_1"
+        },
+        {
+          "produce_type": "cocoa ",
+          "variety": "type_3"
+        }
+      ],
+      "farmer": "2",
+      "farm_area": "SRID=4326;POLYGON ((34.69263437314556 -0.11054985816501378, 34.669969325666564 -0.16616797994936602, 34.72916904554439 -0.2204126643636505, 34.83152775830303 -0.28770325873371744, 34.832865068627875 -0.17646761651078183, 34.74078846652113 -0.17372104730490678, 34.74286179120858 -0.07827756353968718, 34.84454808338369 -0.10162348187356197, 34.77587098119865 -0.02059936479060312, 34.69885874225125 -0.01785278291423789))"
+    },
+    {
+      "id": "735",
+      "name": "Border1",
+      "description": "This is a demo to test everything",
+      "produce": [
+        {
+          "produce_type": "Sugarcane",
+          "variety": "type_3"
+        }
+      ],
+      "farmer": "3",
+      "farm_area": "SRID=4326;POLYGON ((35.00710570972194 1.7657726629466286, 34.97688564641665 1.639485695736832, 34.91919279828832 1.5598658653430082, 34.8450162792662 1.4884800029826135, 34.77358703872638 1.436311943390042, 34.80105982354941 1.3649221509479303, 34.8312798868547 1.2935302390231982, 34.798312545067105 1.2193903597622147, 35.317548178221934 1.131518238774052, 35.53458317832369 1.2962761196418218, 35.603265140381204 1.2852925793638545, 35.619748811275 1.3868884718166363, 35.504363115018364 1.4610232806227543, 35.43293387447854 1.5516291565733218, 35.46864849474845 1.6202674001017445, 35.49337400108917 1.6806671337507348, 35.49062672260686 1.7410649992245233, 35.50985767198297 1.8042061519566792, 35.36974646938564 1.9222467160981036, 35.034578494544974 1.9277367801405985))"
+    },
+    {
+      "id": "2000",
+      "name": "Juja Farm",
+      "description": "This is a farm in Juja mainly dealing with grafted mangoes",
+      "produce": [
+        {
+          "produce_type": "Mangoes",
+          "variety": "Grafted"
+        }
+      ],
+      "farmer": "5",
+      "farm_area": "SRID=4326;POLYGON ((37.08246734186446 -1.1664389413209866, 37.083508302851904 -1.166042056618697, 37.08340622647879 -1.1658811573991135, 37.08329354513478 -1.1656827150156288, 37.08325061890852 -1.1654896359263913, 37.083218424238794 -1.1651678374149113, 37.08327744779995 -1.16499621152709, 37.083282813578215 -1.1647280460564389, 37.08330964246964 -1.1645564201418248, 37.083341596210296 -1.164180988417193, 37.08312696507887 -1.1641917150385872, 37.082858676164584 -1.1642668013872286, 37.08185581725267 -1.1646958661982352))"
+    },
+    {
+      "id": "2001",
+      "name": "Mukua Farm",
+      "description": "This is a farm owned by a small scale farmer in Ngong ",
+      "produce": [
+        {
+          "produce_type": "Avocado",
+          "variety": "Oily_type"
+        }
+      ],
+      "farmer": "6",
+      "farm_area": "SRID=4326;POLYGON ((36.67826392000026 -1.35894251455999, 36.67829074889168 -1.3590819501961529, 36.678329650784235 -1.3591865269180077, 36.67840745456937 -1.35937288798802, 36.678461112352224 -1.3595069606913737, 36.67855233058311 -1.3595150050533367, 36.67874013282311 -1.359488190513358, 36.67885549705624 -1.359454672337946, 36.67902451907226 -1.3594265170702673, 36.67904195785169 -1.3593621621714334, 36.67898964151338 -1.3592455189129502, 36.67893330084137 -1.3591208312855834, 36.6789145206174 -1.3590511134696266, 36.67886354572365 -1.35892776655954, 36.67883403394311 -1.3588339156454683, 36.67881257082994 -1.3588258712812278, 36.67860867125508 -1.358863411647424, 36.678431600571685 -1.3588955891036856, 36.678286724557935 -1.3588996112856913, 36.67823574966423 -1.35891167783167))"
+    }
+  ],
+  "farmers": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "2",
+      "name": "Jane Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "3",
+      "name": "Alice Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "4",
+      "name": "Bob Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "5",
+      "name": "Eve Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "6",
+      "name": "Mark Doe",
+      "phone-number": "0712345678"
+    },
+    {
+      "id": "7",
+      "name": "Luke Doe",
+      "phone-number": "0712345678"
+    }
+  ]
+}
