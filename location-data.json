@@ -97,6 +97,14 @@
       "region": "Nairobi",
       "description": "This is a farm owned by Mukua in Ngong beside Oloo Road",
       "farmName": "Mukua Farm"
+    },
+    {
+      "id": "1012",
+      "name": "Juja Market",
+      "label": "Distribution Center",
+      "location": "SRID=4326;POINT (37.0156374580962 -1.1011399422951318)",
+      "region": "Central",
+      "description": "This is a demo for adding a location marker "
     }
   ],
   "farms": [
@@ -128,7 +136,7 @@
     },
     {
       "id": "2000",
-      "name": "Juja Farm",
+      "name": "Nyakio Farm",
       "description": "This is a farm in Juja mainly dealing with grafted mangoes",
       "produce": [
         {
@@ -141,7 +149,7 @@
     },
     {
       "id": "2001",
-      "name": "Mukua Farm",
+      "name": "Muthithi Farm",
       "description": "This is a farm owned by a small scale farmer in Ngong ",
       "produce": [
         {
@@ -154,7 +162,7 @@
     },
     {
       "id": "2002",
-      "name": "Fridah Farm",
+      "name": "Kist Farm",
       "description": "This is a farm in Ngong that mainly deals in Maize and Cassava planting",
       "produce": [
         {
@@ -171,7 +179,7 @@
     },
     {
       "id": "2004",
-      "name": "Nakuru Maize Farm",
+      "name": "Kirimiri Farm",
       "description": "This is a farm in Nakuru that supplies maize corns",
       "produce": [
         {
@@ -184,7 +192,7 @@
     },
     {
       "id": "2005",
-      "name": "ULua Giligil Farm",
+      "name": "Migaa Farm",
       "description": "This is a concept farm in Gilgil that grows tomatoes and potatoes",
       "produce": [
         {
@@ -200,7 +208,7 @@
       "farm_area": "SRID=4326;POLYGON ((36.36656687830733 -0.4644998689612022, 36.36666346231648 -0.46448109411506106, 36.36676004632563 -0.46444086230176523, 36.36688077633706 -0.4644301338181815, 36.367022969461615 -0.46440331260913953, 36.367124919249065 -0.46439258412549217, 36.367216137479915 -0.4643818556418321, 36.36728320970849 -0.4643255311023528, 36.36726979526278 -0.46423970323180014, 36.367251015038754 -0.46413241839214625, 36.3672456492605 -0.46404927264030443, 36.36723760059304 -0.4639741732506893, 36.36722686903648 -0.4638722526492332, 36.367210771701615 -0.46377301416746763, 36.367189308588486 -0.46367377568428986, 36.367189308588486 -0.4635959941694882, 36.36716516258621 -0.46351284841133616, 36.36715443102961 -0.46342165628837495, 36.36714369947304 -0.4633143714363296, 36.36713565080563 -0.46321245082537005, 36.367124919249065 -0.46310516597015683, 36.36709540746849 -0.46306761627044485, 36.36703906679648 -0.46307834475608955, 36.36696931167876 -0.46307834475608955, 36.36693443411991 -0.46310516597015683, 36.36685663033478 -0.4630890732417343, 36.366778826549606 -0.46307834475608955, 36.36672248587764 -0.46307298051327356, 36.366674193873045 -0.46310248384874886, 36.36662590186849 -0.46307298051327356, 36.36656151252903 -0.4630810268774976, 36.36654273230506 -0.46316417264072574, 36.36656419541818 -0.4633143714363296, 36.36656151252903 -0.46361745113917463, 36.36655882963992 -0.46382397446909257, 36.36656419541818 -0.4639446699188398, 36.366577609863896 -0.4640197693087603, 36.36655078097247 -0.46407609385068227, 36.36655614675077 -0.4642236105059602))"
     },
     {
-      "id": "2006",
+      "id": "Njengo",
       "name": "Kamau Gatundu Farm",
       "description": "This is a farm in Gatundu that is our main supplier for several products",
       "produce": [
@@ -224,7 +232,7 @@
   "farmers": [
     {
       "id": "1",
-      "name": "John Doe",
+      "name": "Ian Ndolo",
       "phone-number": "0712345678"
     },
     {
@@ -234,22 +242,22 @@
     },
     {
       "id": "3",
-      "name": "Alice Doe",
+      "name": "Neema Ogao",
       "phone-number": "0712345678"
     },
     {
       "id": "4",
-      "name": "Bob Doe",
+      "name": "Pharis Kariuki",
       "phone-number": "0712345678"
     },
     {
       "id": "5",
-      "name": "Eve Doe",
+      "name": "Maureen Mukami",
       "phone-number": "0712345678"
     },
     {
       "id": "6",
-      "name": "Mark Doe",
+      "name": "David Mwalimu",
       "phone-number": "0712345678"
     },
     {
